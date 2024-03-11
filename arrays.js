@@ -62,7 +62,7 @@ console.log(stations);
 // const start = stations.indexOf("Leeds");
 // const deleteCount = 1;
 // const removedItems = stations.splice(start, deleteCount);
-// console.log(stations);
+// console.log(stations); --> Didn't work becasue I used the same declarations for Q5.
 
 const indexLeeds = stations.indexOf("Leeds");
 if (indexLeeds !== -1) {
@@ -93,3 +93,11 @@ console.log(stoppingAtDurham);
  * Q9.
  * If we are stopping at Durham, print "Yay Durham!" to the terminal. If not print "Aww...".
  */
+
+station = "Durham";
+
+if (station === "Durham") {
+    console.log("Yay " + station + "!");
+} else {
+    console.log("Aww...");
+}
