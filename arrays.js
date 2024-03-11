@@ -47,8 +47,10 @@ console.log("The third station is " + thirdStation);
  * Q5.
  * Someone put the wrong Berwick on the timetable! Update "North Berwick" to "Berwick-upon-Tweed".
  */
-
-// console.log(stations);
+const start = stations.indexOf("North Berwick", "Leeds");
+const deleteCount = 1;
+const removedItems = stations.splice(start, deleteCount, "Berwick-upon-Tweed");
+console.log(stations);
 
 
 
@@ -57,16 +59,24 @@ console.log("The third station is " + thirdStation);
  * How did Leeds get on there? Better remove it.
  */
 
+// const start = stations.indexOf("Leeds");
+// const deleteCount = 1;
+// const removedItems = stations.splice(start, deleteCount);
 // console.log(stations);
 
+const indexLeeds = stations.indexOf("Leeds");
+if (indexLeeds !== -1) {
+    stations.splice(indexLeeds, 1);
+}
+console.log(stations);
 
 
 /**
  * Q7.
  * We forgot about Darlington! Add it to the route between Newcastle and York.
  */
-
-// console.log(stations);
+stations.splice(3, 0, "Darlington");
+console.log(stations);
 
 
 
@@ -75,9 +85,8 @@ console.log("The third station is " + thirdStation);
  * Is Durham one of the stops?
  */
 
-stoppingAtDurham = null;
-
-// console.log(stoppingAtDurham);
+stoppingAtDurham = false;
+console.log(stoppingAtDurham);
 
 
 /**
